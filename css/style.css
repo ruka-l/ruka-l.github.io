@@ -80,3 +80,27 @@ footer a {
 footer p {
     font-size: 15px;
 }
+
+div .carousel-item {
+    width: auto;
+}
+
+div .carousel-item img {
+    width: 100vw;
+}
+
+header {
+    position: static;
+}
+
+@media screen and (min-width: 1000px){
+    div .carousel-item {
+        height: 70vh;
+    }
+    
+    div .carousel-item img {
+        width: 100vw;
+        height: auto;
+    }
+    
+}
