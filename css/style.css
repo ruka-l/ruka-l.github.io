@@ -82,7 +82,8 @@ footer p {
 }
 
 div .carousel-item {
-    width: auto;
+    width: 100vw;
+    height: 50vh;
 }
 
 div .carousel-item img {
