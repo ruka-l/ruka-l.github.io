@@ -236,6 +236,12 @@
     margin-top: -15vh;
    }
 
+   @media screen and (max-width: 480px){
+       #disc1 {
+        margin-top: -20vh;
+       }
+   }
+
    #titled {
        font-size: 50px;
        color: white;
