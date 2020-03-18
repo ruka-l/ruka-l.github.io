@@ -9,7 +9,7 @@
 }
 
 .navbar-brand {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'HemiHeadW00-Regular';
     font-weight: 900;
     font-size: 25px;
 }
@@ -22,7 +22,7 @@
     color: white;
 }
 .title {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'HemiHeadW00-Regular';
     font-size: 70px;
     margin-top: 200px;
 }
@@ -33,7 +33,7 @@
         margin-right: 0px;
     }
     .title {
-        font-family: 'Noto Sans KR', sans-serif;
+        font-family: 'hemi-head';
         margin-top: 200px;
         font-size: 45px;
         font-weight: 900;
@@ -101,4 +101,25 @@ div .carousel-item img {
 
 header {
     position: static;
+}
+div .r{
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center; /*inline-block의 장점은 폰트의 성질도 포함되고 있어서 text-align으로 정렬을 쉽게 할수가 있다.*/
+    font-size: 0;
+}
+
+.hov-1 {
+    padding: 10px;
+    width: 40vw;
+    height: 30vh;
+    display: inline-block; /*이부분에 성질을 inline-block로 바꿔줘서 가로배치를 해줬다.*/
+    vertical-align: top;
+}
+.hov-3 {
+    padding: 10px;
+    width: 55vw;
+    height: 30vh;
+    display: inline-block; /*이부분에 성질을 inline-block로 바꿔줘서 가로배치를 해줬다.*/
+    vertical-align: top;
 }
