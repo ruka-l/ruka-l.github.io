@@ -14,6 +14,9 @@
     font-size: 25px;
 }
 
+header {
+    background-color: white;
+}
 .page {
     height: 100vh;
     padding: 30px;
@@ -122,4 +125,8 @@ div .r{
     height: 30vh;
     display: inline-block; /*이부분에 성질을 inline-block로 바꿔줘서 가로배치를 해줬다.*/
     vertical-align: top;
+}
+
+.urlshorter_bg {
+    background-color: black;
 }
