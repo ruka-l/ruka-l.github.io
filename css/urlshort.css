@@ -230,15 +230,14 @@
     height: 50vh;
     font-size: 15px;
     line-height: 5px;
-    background: black;
     color: gray;
     padding-left: 50px;
     margin-top: -15vh;
    }
 
-   @media screen and (max-width: 480px){
+   @media screen and (max-width: 500px){
        #disc1 {
-        margin-top: -20vh;
+        margin-top: -150px;
        }
    }
 
