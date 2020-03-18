@@ -3,8 +3,8 @@
    ========================================================================== */
 
    /* html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent} */
-   body{line-height:1; }
-   /* position:fixed;overflow:hidden;height:100%; */
+   body{line-height:1; position:fixed;overflow:hidden;height:100%; }
+   /* */
    
    article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
    nav ul{list-style:none}
@@ -172,6 +172,8 @@
    /* ---- stats.js ---- */
    
    .count-particles{
+     position: absolute;
+     z-index: 2;
      background: #000022;
      position: absolute;
      top: 48px;
@@ -223,7 +225,15 @@
 
 
    #disc1 {
-    height: 20vh;
+    position: absolute;
+    z-index: 1;
+    height: 50vh;
+    font-size: 15px;
+    line-height: 5px;
+    background: black;
+    color: gray;
+    padding-left: 50px;
+    margin-top: -12vh;
    }
 
    #titled {
@@ -231,4 +241,20 @@
        color: white;
        padding-top: 30vh;
        font-family: 'GmarketSansLight',Arial, Helvetica, sans-serif;
+   }
+
+   a {
+       text-decoration: none;
+   }
+   a:visited {
+       color: gray;
+       text-decoration: none;
+   }
+   a:link {
+       color: gray;
+       text-decoration: none;
+   }
+   a:hover {
+       color: white;
+       text-decoration: none;
    }
