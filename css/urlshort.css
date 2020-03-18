@@ -3,7 +3,8 @@
    ========================================================================== */
 
    /* html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent} */
-   body{line-height:1; position:fixed;overflow:hidden;height:100%;}
+   body{line-height:1; }
+   /* position:fixed;overflow:hidden;height:100%; */
    
    article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
    nav ul{list-style:none}
@@ -23,8 +24,7 @@
    /* =============================================================================
       My CSS
       ========================================================================== */
-      @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,900&display=swap&subset=korean');
-      @font-face { font-family: 'OTEnjoystoriesBA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff'); font-weight: normal; font-style: normal; }
+      @font-face { font-family: 'GmarketSansLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff%27') format('woff'); font-weight: normal; font-style: normal; }
       #nav-menu {
           margin-left: 200px;
           margin-right: 200px;
@@ -34,7 +34,7 @@
       }
       
       .navbar-brand {
-          font-family: 'HemiHeadW00-Regular';
+          /* font-family: 'HemiHeadW00-Regular'; */
           font-weight: 900;
           font-size: 25px;
       }
@@ -49,11 +49,6 @@
           text-align: center;
           color: white;
       }
-      .title {
-          font-family: 'HemiHeadW00-Regular';
-          font-size: 70px;
-          margin-top: 200px;
-      }
       
       @media screen and (max-width: 900px){
           #nav-menu {
@@ -61,7 +56,7 @@
               margin-right: 0px;
           }
           .title {
-              font-family: 'hemi-head';
+              /* font-family: 'hemi-head'; */
               margin-top: 200px;
               font-size: 45px;
               font-weight: 900;
@@ -69,7 +64,7 @@
       }
       
       .subtitle {
-          font-family: 'Noto Sans KR', sans-serif;
+          /* font-family: 'Noto Sans KR', sans-serif; */
           font-size: 25px;
       }
       
@@ -94,13 +89,11 @@
       .subpage {
           background: white;
           padding: 40px;
-          font-family: 'Noto Sans KR', sans-serif;
       }
       footer {
           padding: 30px;
           background: #2e2e2e;
           color: white;
-          font-family: 'Noto Sans KR', sans-serif;
       }
       footer a {
           color: white;
@@ -225,4 +218,17 @@
      background-size: cover;
      background-position: 50% 50%;
      background-repeat: no-repeat;
+     text-align: center;
+   }
+
+
+   #disc1 {
+    height: 20vh;
+   }
+
+   #titled {
+       font-size: 50px;
+       color: white;
+       padding-top: 30vh;
+       font-family: 'GmarketSansLight',Arial, Helvetica, sans-serif;
    }
