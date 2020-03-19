@@ -11,24 +11,23 @@
    /* =============================================================================
       My CSS
       ========================================================================== */
-      .navbar-nav {
-          margin-top: 10px;
-      }
       #nav-menu {
           margin-left: 200px;
           margin-right: 200px;
           font-size: 15px;
+          margin-top: 10px;
       }
       .navbar-light .navbar-toggler {
           border: none;
       }
       
       .navbar-brand {
-          font-family: 'HemiHeadW00-Regular';
+          font-family: 'logofont';
           font-size: 25px;
+          margin-top: -9px;
       }
       nav {
-          padding-top: 10px;
+          padding-top: 0px;
       }
       header {
           background-color: white;
@@ -170,7 +169,7 @@
      background-position: 50% 50%;
      background-repeat: no-repeat;
      text-align: center;
-     padding-top: 3px;
+     padding-top: px;
    }
 
 
