@@ -5,12 +5,54 @@
   <meta charset="utf-8">
   <title>체리 네트워크</title>
   <meta name="description" content="체리네트워크 공식 홈페이지">
+  <META HTTP-EQUIV="Page-Enter" CONTENT="BlendTrans(Duration=3.0)">
+    <META HTTP-EQUIV="Page-exit" CONTENT="BlendTrans(Duration=3.0)">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/urlshort.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <style>
+    body{
+      animation: fadein 2000ms ease-out;
+      -moz-animation: fadein 2000ms ease-out; /* Firefox */
+      -webkit-animation: fadein 2000ms ease-out; /* Safari and  Chrome */
+      -o-animation: fadein 2000ms ease-out; /* Opera */
+    }
+    @keyframes fadein {
+        from {opacity:0;}
+        to {opacity:1;}
+    }
+    @-moz-keyframes fadein { /* Firefox */
+        from {opacity:0;}
+        to {opacity:1;}
+    }
+    @-webkit-keyframes fadein { /* Safari and Chrome */
+        from {opacity:0;}
+        to {opacity:1;}
+    }
+    @-o-keyframes fadein { /* Opera */
+        from {opacity:0;}
+        to {opacity: 1;}
+    }
+    @keyframes fadeout {
+        from {opacity:1;}
+        to {opacity:0;}
+    }
+    @-moz-keyframes fadeout { /* Firefox */
+        from {opacity:1;}
+        to {opacity:0;}
+    }
+    @-webkit-keyframes fadeout { /* Safari and Chrome */
+        from {opacity:1;}
+        to {opacity:0;}
+    }
+    @-o-keyframes fadeout { /* Opera */
+        from {opacity:1;}
+        to {opacity: 0;}
+    }
+  </style>
 </head>
 <body>
 
@@ -20,8 +62,9 @@
 </div> -->
 
 <!-- particles.js container -->
+
 <div id="particles-js" height="100%">
-  <nav class="navbar navbar-expand-lg navbar-dark" id="nav-menu">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="nav-menu">
     <a class="navbar-brand" href="/index.html">Cherry NETWORK</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -55,14 +98,48 @@
 <!-- scripts -->
 <script src="/js/particles.js"></script>
 <script src="/js/app.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+  $(window).ready(function($) {
+    $("body").css("background", "black");
+    $("body").fadeIn(2000);
+    $("a.transition").click(function(event){
+      event.preventDefault();
+      linkLocation = this.href;
+      $("body").fadeOut(1000, redirectPage);
+    });
+    
+  });
+
+  $(function () {
+    
+    $("a").click(function () {
+        var url = $(this).attr("href");
+        $("body").fadeIn();
+        },500, function () {
+            document.location.href = url;
+        });
+        
+        return false;
+    });
+    
+</script>
 
 <!-- stats.js -->
 <!-- <script src="/js/lib/stats.js"></script> -->
 
+<!--
 
+  animation: fadein 2000ms ease-out;
+      -moz-animation: fadein 2000ms ease-out; /* Firefox */
+      -webkit-animation: fadein 2000ms ease-out; /* Safari and  Chrome */
+      -o-animation: fadein 2000ms ease-out;
+-->
 </body>
 
 </html>
