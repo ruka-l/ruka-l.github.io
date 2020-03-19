@@ -86,7 +86,7 @@
   <p>&copy;2020 Cherry Network. All rights reserved.</p>
   <p>대표 이동규</p>
   <p><a href="#" onclick="no();">개인정보취급방침</a> | <a onclick="no();" href="#">저작권 안내</a></p>
-  <p>Site by 주진표</p>
+  <p>Site by <span onclick="umaru();">주진표</span></p>
 </div>
 <script>
     // $('body').on('scroll touchmove mousewheel', function(event) {
@@ -106,6 +106,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script>
   a = 0;
+  b = 0;
   function wa() {
     if (a == 10){
       alert("와!");
@@ -114,6 +115,15 @@
       a = 0;
     } else {
       a++;
+    }
+  }
+  function umaru() {
+    if (b == 10){
+      alert("우마룽~~~~~~~~");
+      location.href = 'https://umaru-ani.me/';
+      b = 0;
+    } else {
+      b++;
     }
   }
   function no() {
