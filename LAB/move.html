@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LAB - move</title>
+        <meta name="viewport" content="width = device-width">
+        <style>
+            .player {
+                background: black;
+                border-radius: 30px;
+                width: 20px;
+                height: 20px;
+            }
+            body {
+                margin: 10px;
+            }
+            p {
+                position: static;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="player"></div>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script>
+            alert('방향키를 사용해서 움직이세요.');
+            var y = 0;
+            var x = 0;
+            var height = $( window ).height();
+            var width = $( window ).width();
+
+            // 37 : left
+            // 38 : up
+            // 39 : right
+            // 40 : down
+            $(document).keydown(function(event) {
+                if ( event.keycode == 37 || event.which == 37 ) {
+                    if (x >= -10){
+                        x = x - 4;
+                    } else {
+                        x = -10;
+                    }
+                }
+                if ( event.keycode == 38 || event.which == 38 ) {
+                    if (y >= -10){
+                        y = y - 4;
+                    } else {
+                        y = -10;
+                    }
+                }
+                if ( event.keycode == 39 || event.which == 39 ) {
+                    if (x <= width + 10){
+                        x = x + 4;
+                    } else {
+                        x = width + 10;
+                    }
+                }
+                if ( event.keycode == 40 || event.which == 40 ) {
+                    if (y <= height + 10){
+                        y = y + 4;
+                    } else {
+                        y = height + 10;
+                    }
+                }
+                //y값을 margin에 적용
+                $('.player').css('margin-top', y);
+                $('.player').css('margin-left', x);
+            });
+        </script>
+    </body>
+</html>
