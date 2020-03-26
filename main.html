@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cherry Char</title>
+        <meta name="viewport" content="width = device-width">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <div class="texts">
+                <span class="text"></span>
+                <br>
+                <span class="res">&copy; 2020 Cherry Network.<br>키보드를 입력하여 명령을 실행하세요</span>
+        </div>
+          <p class="typing"></p> 
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script>
+            discord_goto = 0;
+            cafe_goto = 0;
+            function compile(texts){
+                if (texts.split(' ')[0] == 'echo'){
+                    $('.res').text(texts.substr(4, texts.length));
+                } else if (texts.split(' ')[0] == 'alert'){
+                    $('.res').text('명령을 실행했습니다');
+                    alert(texts.substr(6, texts.length));
+                } else if (texts == 'discord'){
+                    $('.res').text('체리네트워크 디스코드 서버로 이동할까요? (y or n)');
+                    discord_goto = 1;
+                } else if (discord_goto == 1 && texts == 'y'){
+                    window.open('https://discord.gg/fdCENHG')
+                    $('.res').text('명령을 실행했습니다');
+                    discord_goto = 0;
+                } else if (discord_goto == 1 && texts == 'n'){
+                    $('.res').text('명령을 실행했습니다');
+                    discord_goto = 0;
+                } else if (texts == 'cafe'){
+                    $('.res').text('체리네트워크 네이버 카페로 이동할까요? (y or n)');
+                    cafe_goto = 1;
+                } else if (cafe_goto == 1 && texts == 'y'){
+                    window.open('https://cafe.naver.com/cherrynetwork')
+                    $('.res').text('명령을 실행했습니다');
+                    cafe_goto = 0;
+                } else if (cafe_goto == 1 && texts == 'n'){
+                    $('.res').text('명령을 실행했습니다');
+                    cafe_goto = 0;
+                } else if (texts.split(' ')[0] == 'site'){
+                    url = 'http://'+texts.substr(5, texts.length);
+                    window.open(url);
+                    $('.res').text('명령을 실행했습니다');
+                    cafe_goto = 0;
+                } else if (texts == 'wa sans'){
+                    alert('와!');
+                    alert('샌즈!!!');
+                    window.open('https://jcw87.github.io/c2-sans-fight/');
+                } else {
+                    $('.res').text('알 수 없는 명령 : '+texts.split(' ')[0]);
+                }
+            }
+            i = 0;
+            text = '';
+            textline = '';
+            $(document).keydown(function(event) {
+                textline = '';
+                if( event.keyCode === 65) {
+                    text += 'a';
+                }
+                if( event.keyCode === 66) {
+                    text += 'b';
+                }
+                if( event.keyCode === 67) {
+                    text += 'c';
+                }
+                if( event.keyCode === 68) {
+                    text += 'd';
+                }
+                if( event.keyCode === 69) {
+                    text += 'e';
+                }
+                if( event.keyCode === 70) {
+                    text += 'f';
+                }
+                if( event.keyCode === 71) {
+                    text += 'g';
+                }
+                if( event.keyCode === 72) {
+                    text += 'h';
+                }
+                if( event.keyCode === 73) {
+                    text += 'i';
+                }
+                if( event.keyCode === 74) {
+                    text += 'j';
+                }
+                if( event.keyCode === 75) {
+                    text += 'k';
+                }
+                if( event.keyCode === 76) {
+                    text += 'l';
+                }
+                if( event.keyCode === 77) {
+                    text += 'm';
+                }
+                if( event.keyCode === 78) {
+                    text += 'n';
+                }
+                if( event.keyCode === 79) {
+                    text += 'o';
+                }
+                if( event.keyCode === 80) {
+                    text += 'p';
+                }
+                if( event.keyCode === 81) {
+                    text += 'q';
+                }
+                if( event.keyCode === 82) {
+                    text += 'r';
+                }
+                if( event.keyCode === 83) {
+                    text += 's';
+                }
+                if( event.keyCode === 84) {
+                    text += 't';
+                }
+                if( event.keyCode === 85) {
+                    text += 'u';
+                }
+                if( event.keyCode === 86) {
+                    text += 'v';
+                }
+                if( event.keyCode === 87) {
+                    text += 'w';
+                }
+                if( event.keyCode === 88) {
+                    text += 'x';
+                }
+                if( event.keyCode === 89) {
+                    text += 'y';
+                }
+                if( event.keyCode === 90) {
+                    text += 'z';
+                }
+                if( event.keyCode === 32) {
+                    text += ' ';
+                }
+                if( event.keyCode === 13) {
+                    compile(text);
+                    text = '';
+                }
+                if( event.keyCode === 8) {
+                    text = text.slice(0,-1)
+                }
+                if( event.keyCode === 190) {
+                    text += '.';
+                }
+                $('.text').text(text);
+            });
+        </script>
+
+    </body>
+</html>
